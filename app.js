@@ -32,6 +32,6 @@ http.createServer(function(request, response) {
             response.end();
         });
     });
-}).listen(parseInt(port, 10));
+}).listen(process.env.PORT || 5000);
 
 console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
